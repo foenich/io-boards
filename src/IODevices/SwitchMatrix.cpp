@@ -42,6 +42,9 @@ void SwitchMatrix::update() {
       for (int row = 0; row < MAX_ROWS; row++) {
         if (rows[row] != -1 && !toggled[column][row]) {
           bool new_state = digitalRead(rows[row]);
+          if (activeLow) {
+            new_state = !(new_state);
+          }
           if (new_state != state[column][row]) {
             state[column][row] = new_state;
             toggled[column][row] = true;
