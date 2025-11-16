@@ -11,7 +11,7 @@
 #include "../PPUC.h"
 
 #ifndef MAX_COLUMNS
-#define MAX_COLUMNS 10
+#define MAX_COLUMNS 18
 #endif
 
 #ifndef MAX_ROWS
